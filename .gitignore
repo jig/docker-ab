@@ -3,6 +3,9 @@
 *.a
 *.so
 
+#emacs backups
+*~
+
 # Folders
 _obj
 _test
