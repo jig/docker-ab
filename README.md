@@ -6,7 +6,7 @@ Apache Benchmark Docker image
 Run
 ---
 
-	$ docker run jordi/ab ab -k -n 10000 -c 16 http://localhost:8080/
+	$ docker run jordi/ab ab -v 2 https://docker.io/
 
 
 Pull
