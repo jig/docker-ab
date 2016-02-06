@@ -1,10 +1,8 @@
-FROM debian:jessie
-MAINTAINER Jordi Íñigo
+FROM ubuntu
+MAINTAINER Jordi Íñigo Griera
 
 ENV TERM linux
-RUN apt-get -y update
-
-# Download general prerequisites
-RUN apt-get -y install apache2-utils
+RUN apt-get update && \
+    apt-get -y install apache2-utils
 
 CMD ["/usr/bin/ab"]
