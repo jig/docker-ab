@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM jordi/ubuntu
 MAINTAINER Jordi Íñigo Griera
 
 ENV TERM linux
