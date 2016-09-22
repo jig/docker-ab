@@ -6,7 +6,7 @@ Apache Benchmark Docker image
 Run
 ---
 
-	$ docker run jordi/ab ab -v 2 https://docker.io/
+	$ docker run --rm jordi/ab ab -v 2 https://www.docker.com/
 
 
 Pull
