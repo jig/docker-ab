@@ -1,8 +1,7 @@
-FROM jordi/ubuntu
+FROM alpine
 MAINTAINER Jordi Íñigo Griera
 
 ENV TERM linux
-RUN apt-get update
-RUN apt-get -y install apache2-utils
+RUN apk --no-cache add apache2-utils
 
 CMD ["/usr/bin/ab"]
