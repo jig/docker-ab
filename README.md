@@ -2,10 +2,11 @@
 
 Apache Benchmark Docker image
 
-## Run
+## HTTP GET request
+
+To send an HTTP GET request you can use:
 
 	$ docker run --rm jordi/ab ab -v 2 https://www.docker.com/
-
 
 ## Pull
 
@@ -16,6 +17,16 @@ Apache Benchmark Docker image
 `git clone` this project, cd into it, and:
 
 	$ docker build -t ab .
+	
+## HTTP POST request
+
+Sending a POST request is slightly more convoluted. As `ab` requires the POST body to be in a file, you should pass the file from the host (well, the Docker client) to the container. There are several ways to do that, but perhaps the easiest is to share the current directory:
+
+```
+	$ docker run --rm --read-only -v `pwd`:`pwd` -w `pwd` jordi/ab ab -T application/json -p post.json -v 2 https://<server>/<api-func>
+```
+
+you must have the `post.json` file readable in your host current directory prior to execute `docker run ...`
 
 # Notes
 
