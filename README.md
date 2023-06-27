@@ -2,8 +2,6 @@
 
 Apache Benchmark Docker image.
 
-❗Breaking changes on v2.0.0: now the `ab` command is not needed after the image name. This readme has been updated accordingly.
-
 ## HTTP GET request
 
 To send an HTTP GET request you can use:
